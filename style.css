@@ -1,0 +1,95 @@
+/* إعدادات الخطوط والـ Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* خلفية الصفحة */
+body {
+    background-color: #212121;
+    color: white;
+    font-size: 16px;
+}
+
+/* تنسيق الهيدر */
+header h2 {
+    text-align: center;
+    color: #0EA691;
+    margin: 20px 0;
+}
+
+/* تنسيق عنوان المباراة */
+.match-title h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* تنسيق مشغل الفيديو */
+.video-player {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+video {
+    width: 80%;
+    border: 5px solid #0EA691;
+    border-radius: 10px;
+}
+
+/* تنسيق اختيارات الجودة */
+.quality-selection {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.quality-selection button {
+    background-color: #0EA691;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.quality-selection button:hover {
+    background-color: #068f6f;
+}
+
+/* تنسيق الإعلانات */
+.ads {
+    background-color: #333;
+    padding: 10px;
+    margin: 20px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.ads p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* تنسيق reCAPTCHA */
+.g-recaptcha {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #0EA691;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+footer strong {
+    font-size: 18px;
+}

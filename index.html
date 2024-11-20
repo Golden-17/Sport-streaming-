@@ -3,49 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مشغل المباراة</title>
+    <title>BallonTV - المباريات الجارية</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- الرأس -->
     <header>
-        <h2>مشغل المباراة</h2>
+        <div class="logo">
+            <img src="logo.png" alt="BallonTV">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="match1.html">المباراة 1</a></li>
+                <li><a href="match2.html">المباراة 2</a></li>
+                <li><a href="match3.html">المباراة 3</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- عنوان المباراة -->
-    <div class="match-title">
-        <h3>المباراة 1: فريق A ضد فريق B</h3>
-    </div>
+    <!-- محتوى المباريات الجارية -->
+    <main>
+        <section id="live-matches">
+            <h2>المباريات الجارية</h2>
+            <div class="matches">
+                <div class="match">
+                    <h3><a href="match1.html">المباراة 1: فريق A ضد فريق B</a></h3>
+                </div>
+                <div class="match">
+                    <h3><a href="match2.html">المباراة 2: فريق C ضد فريق D</a></h3>
+                </div>
+                <div class="match">
+                    <h3><a href="match3.html">المباراة 3: فريق E ضد فريق F</a></h3>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- مشغل الفيديو -->
-    <div class="video-player">
-        <video id="videoPlayer" controls>
-            <source src="match1.mp4" type="video/mp4">
-            <source src="match1.webm" type="video/webm">
-            <source src="match1.ogg" type="video/ogg">
-            متصفحك لا يدعم مشغل الفيديو.
-        </video>
-    </div>
-
-    <!-- اختيارات الجودة -->
-    <div class="quality-selection">
-        <button>HD</button>
-        <button>SD</button>
-        <button>FHD</button>
-        <button>4K</button>
-    </div>
-
-    <!-- الإعلانات -->
-    <div class="ads">
-        <p>إعلان 1</p>
-        <p>إعلان 2</p>
-    </div>
-
-    <!-- reCAPTCHA -->
-    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
-
+    <!-- footer -->
     <footer>
-        <p><strong><span>All Rights Reserved®</span> البالونTV</strong></p>
+        <p>&copy; 2024 جميع الحقوق محفوظة - BallonTV</p>
     </footer>
 
 </body>

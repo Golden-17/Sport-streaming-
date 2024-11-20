@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المباراة 1 - BallonTV</title>
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الرأس -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="BallonTV">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="match1.html">المباراة 1</a></li>
+                <li><a href="match2.html">المباراة 2</a></li>
+                <li><a href="match3.html">المباراة 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- محتوى المشغل -->
+    <main>
+        <section id="live-match">
+            <div class="match-title">
+                <h3>بث مباشر: فريق A ضد فريق B</h3>
+            </div>
+
+            <!-- مشغل الفيديو -->
+            <div class="video-player">
+                <video id="videoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
+                    <source src="https://cdn-globecast.akamaized.net/live/eds/arriadia/hls_snrt/index.m3u8" type="application/x-mpegURL">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+
+            <!-- اختيارات الجودة -->
+            <div class="quality-selection">
+                <button data-quality="480p">SD</button>
+                <button data-quality="720p">HD</button>
+                <button data-quality="1080p">FHD</button>
+                <button data-quality="2160p">4K</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2024 جميع الحقوق محفوظة - BallonTV</p>
+    </footer>
+
+    <!-- مكتبة Video.js -->
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <script>
+        const video = document.getElementById('videoPlayer');
+
+        // تشغيل الفيديو مع HLS
+        if (Hls.isSupported()) {
+            const hls = new Hls();
+            hls.loadSource('https://cdn-globecast.akamaized.net/live/eds/arriadia/hls_snrt/index.m3u8');
+            hls.attachMedia(video);
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+            video.src = 'https://cdn-globecast.akamaized.net/live/eds/arriadia/hls_snrt/index.m3u8';
+        } else {
+            alert("متصفحك لا يدعم تشغيل البث المباشر.");
+        }
+    </script>
+
+</body>
+</html>
